@@ -12,8 +12,8 @@ export default function MobileNavLinks() {
 
   return (
     <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
-      <Dialog.Trigger>
-        <HamburgerMenuIcon className="w-6 h-6" />
+      <Dialog.Trigger className="flex justify-center">
+        <HamburgerMenuIcon className="w-[1.618rem] h-[1.618rem]" />
       </Dialog.Trigger>
 
       <AnimatePresence>
@@ -57,10 +57,9 @@ const NavContent = React.forwardRef((props, forwardedRef) => (
     exit={{ x: '100vh' }}
     transition={{ type: 'tween', duration: 2 }}
   >
-    <div className="flex items-center justify-between">
-      <Dialog.Title>Menu</Dialog.Title>
+    <div className="flex justify-end p-17">
       <Dialog.Close>
-        <Cross1Icon className="w-6 h-6" />
+        <Cross1Icon className="w-[1.618rem] h-[1.618rem]" />
       </Dialog.Close>
     </div>
 
@@ -77,8 +76,8 @@ function Links() {
     <div className="flex flex-col">
       {routes.map((route) => (
         <NavLink
-          className={`p-3 hover:text-white hover:bg-slate-900 ${
-            pathName === route.path ? 'text-slate-600' : ''
+          className={`p-17 text-h4 font-medium hover:text-white hover:bg-slate-900 ${
+            pathName === route.path ? 'text-slate-900' : ''
           }`}
           key={route.path}
           path={route.path}
