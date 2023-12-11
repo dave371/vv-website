@@ -57,7 +57,7 @@ const NavContent = React.forwardRef((props, forwardedRef) => (
     exit={{ x: '100vh' }}
     transition={{ type: 'tween', duration: 2 }}
   >
-    <div className="flex justify-end p-17">
+    <div className="flex justify-end p-4">
       <Dialog.Close>
         <Cross1Icon className="w-[1.618rem] h-[1.618rem]" />
       </Dialog.Close>
@@ -76,7 +76,7 @@ function Links() {
     <div className="flex flex-col">
       {routes.map((route) => (
         <NavLink
-          className={`p-17 text-h4 font-medium hover:text-white hover:bg-slate-900 ${
+          className={`font-medium pl-4 p-2 text-xl hover:text-white hover:bg-slate-900 ${
             pathName === route.path ? 'text-slate-900' : ''
           }`}
           key={route.path}
