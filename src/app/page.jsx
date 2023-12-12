@@ -1,7 +1,7 @@
+import Benefits from '@/components/Benefits';
 import Hero from '@/components/Hero';
-import LandingAbout from '@/components/LandingAbout';
 import Nav from '@/components/Nav';
-import Services from '@/components/Services';
+import Testimonials from '@/components/Testimonials';
 
 export default function Home() {
   return (
@@ -10,8 +10,8 @@ export default function Home() {
 
       <div className="p-4">
         <Hero />
-        <LandingAbout />
-        <Services />
+        <Benefits />
+        <Testimonials />
       </div>
     </div>
   );

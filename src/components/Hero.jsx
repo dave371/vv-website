@@ -1,6 +1,9 @@
+import Image from 'next/image';
+import heroImage from '../../images/hero.webp';
+
 export default function Hero() {
   return (
-    <div className="mt-16">
+    <div className="mt-12">
       <HeroText />
       <HeroImage />
     </div>
@@ -10,19 +13,28 @@ export default function Hero() {
 function HeroText() {
   return (
     <>
-      <h1 className="text-5xl font-semibold">
-        Elevate Your Wellbeing with VitalityVault
+      <h1 className="text-4xl leading-[50px] font-semibold font-body">
+        Elevate Your Wellness Journey with VitalityVault
       </h1>
-      <p className="mt-6 mb-8 text-xl">
-        Seamless Wellness Solutions for Busy Lives
+      <p className="mt-2 mb-5 text-lg">
+        Discover Tailored Solutions for a Healthier, Happier You
       </p>
-      <button className="px-3 py-2 text-lg font-medium text-white rounded bg-emerald-800">
-        Start Your Journey
+      <button className="px-4 py-2 text-xl font-semibold text-white bg-green-500 rounded">
+        Start Your Transformation
       </button>
     </>
   );
 }
 
 function HeroImage() {
-  return <div className="w-full my-16 rounded aspect-square bg-emerald-900" />;
+  return (
+    <div className="relative w-full my-12 rounded aspect-square bg-emerald-900">
+      <Image
+        className="rounded"
+        src={heroImage}
+        alt="lady meditating outside in nature"
+        fill
+      />
+    </div>
+  );
 }
