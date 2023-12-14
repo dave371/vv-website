@@ -1,4 +1,5 @@
 import Benefits from '@/components/Benefits';
+import Contact from '@/components/Contact';
 import FAQ from '@/components/FAQ';
 import Hero from '@/components/Hero';
 import Nav from '@/components/Nav';
@@ -16,6 +17,7 @@ export default function Home() {
         <Testimonials />
         <Plans />
         <FAQ />
+        <Contact />
       </div>
     </div>
   );
