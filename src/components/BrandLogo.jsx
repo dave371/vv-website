@@ -1,8 +1,8 @@
-export default function BrandLogo() {
+export default function BrandLogo({ className }) {
   return (
-    <div className="flex items-center gap-1 text-green-500">
+    <div className={`flex items-center gap-1 ${className}`}>
       <Logo />
-      <p className="text-[28px] font-semibold">VitalityVault</p>
+      <p className="text-2xl font-medium tracking-wide">VitalityVault</p>
     </div>
   );
 }

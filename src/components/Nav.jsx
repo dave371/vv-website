@@ -7,7 +7,7 @@ export default function Nav() {
   return (
     <div className="flex items-center justify-between p-4">
       <Link className="text-3xl font-semibold" href="/">
-        <BrandLogo />
+        <BrandLogo className="text-green-500" />
       </Link>
 
       <div className="hidden lg:block">
