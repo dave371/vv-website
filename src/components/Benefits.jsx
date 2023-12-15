@@ -24,7 +24,7 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section>
+    <section className="text-white">
       <h2 className="text-2xl font-medium">
         Experience the VitalityVault Advantage
       </h2>

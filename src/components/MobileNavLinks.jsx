@@ -41,7 +41,7 @@ const NavOverlay = React.forwardRef((props, forwardedRef) => (
     initial={{ opacity: 0 }}
     animate={{ opacity: 0.2 }}
     exit={{ opacity: 0 }}
-    transition={{ type: 'tween', duration: 2 }}
+    transition={{ type: 'tween', duration: 0.5 }}
   />
 ));
 
@@ -55,7 +55,7 @@ const NavContent = React.forwardRef((props, forwardedRef) => (
     initial={{ x: '100vh' }}
     animate={{ x: 0 }}
     exit={{ x: '100vh' }}
-    transition={{ type: 'tween', duration: 2 }}
+    transition={{ type: 'tween', duration: 0.5 }}
   >
     <div className="flex justify-end p-4">
       <Dialog.Close>
@@ -77,7 +77,7 @@ function Links() {
       {routes.map((route) => (
         <NavLink
           className={`font-medium pl-4 p-2 text-xl hover:text-white hover:bg-slate-900 ${
-            pathName === route.path ? 'text-slate-900' : ''
+            pathName === route.path ? 'text-green-600' : ''
           }`}
           key={route.path}
           path={route.path}

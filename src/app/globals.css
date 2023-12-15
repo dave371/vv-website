@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .section-clip {
+    clip-path: inset(0 -100vmax);
+  }
+}

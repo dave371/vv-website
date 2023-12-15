@@ -25,7 +25,7 @@ const testimonial = [
 export default function Testimonials() {
   return (
     <section className="mt-12">
-      <h2 className="text-2xl font-medium">
+      <h2 className="text-2xl font-medium text-white">
         Transformative Journeys, Shared Stories
       </h2>
 
@@ -95,7 +95,7 @@ function Carousel() {
         <div className="absolute inset-y-0 flex items-center justify-center -left-3">
           <button
             onClick={prev}
-            className="p-1 text-white bg-green-700 rounded-full"
+            className="p-1 text-white bg-green-900 rounded-full"
           >
             <ChevronLeftIcon className="w-8 h-8" />
           </button>
@@ -103,7 +103,7 @@ function Carousel() {
         <div className="absolute inset-y-0 flex items-center justify-center -right-3">
           <button
             onClick={next}
-            className="p-1 text-white bg-green-700 rounded-full"
+            className="p-1 text-white bg-green-900 rounded-full"
           >
             <ChevronRightIcon className="w-8 h-8" />
           </button>
