@@ -5,7 +5,7 @@ import Hero from '@/components/Hero';
 import Plans from '@/components/Plans';
 import Testimonials from '@/components/Testimonials';
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <Hero />

@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import NavLink from './NavLink';
 import { routes } from '@/data/page-routes';
 import { AnimatePresence, motion } from 'framer-motion';
+import { SignInButton, SignUpButton } from '@clerk/nextjs';
 
 export default function MobileNavLinks() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +52,7 @@ const NavContent = React.forwardRef((props, forwardedRef) => (
   <motion.div
     {...props}
     ref={forwardedRef}
-    className="w-[85%] bg-white right-0 fixed inset-y-0"
+    className="w-[85%] bg-white right-0 fixed inset-y-0 flex flex-col"
     initial={{ x: '100vh' }}
     animate={{ x: 0 }}
     exit={{ x: '100vh' }}
@@ -63,9 +64,28 @@ const NavContent = React.forwardRef((props, forwardedRef) => (
       </Dialog.Close>
     </div>
 
-    <Links />
+    <div className="flex flex-col flex-1">
+      <div className="flex-1">
+        <Links />
+      </div>
+      <UserAuth />
+    </div>
   </motion.div>
 ));
+
+function UserAuth() {
+  return (
+    <div className="p-4">
+      <SignInButton className="w-full h-12 text-lg font-medium text-black border-green-500 rounded border-[2px]">
+        Sign In
+      </SignInButton>
+
+      <SignUpButton className="w-full h-12 mt-3 text-lg font-medium text-white bg-green-500 rounded">
+        Sign Up
+      </SignUpButton>
+    </div>
+  );
+}
 
 NavContent.displayName = 'NavContent';
 
@@ -76,7 +96,7 @@ function Links() {
     <div className="flex flex-col">
       {routes.map((route) => (
         <NavLink
-          className={`font-medium pl-4 p-2 text-xl hover:text-white hover:bg-slate-900 ${
+          className={`font-medium pl-4 p-2 text-xl bg-green-100 hover:text-white hover:bg-slate-900 ${
             pathName === route.path ? 'text-green-600' : ''
           }`}
           key={route.path}

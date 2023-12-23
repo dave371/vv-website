@@ -2,6 +2,7 @@ import Nav from '@/components/Nav';
 import './globals.css';
 import localFont from 'next/font/local';
 import Footer from '@/components/Footer';
+import { ClerkProvider } from '@clerk/nextjs';
 
 export const metadata = {
   title: 'VitalityVault',
@@ -16,12 +17,14 @@ const satoshi = localFont({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${satoshi.variable} ${satoshi.className}`}>
-      <body className="flex flex-col">
-        <Nav />
-        <main className="p-4">{children}</main>
-        <Footer />
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" className={`${satoshi.variable} ${satoshi.className}`}>
+        <body className="flex flex-col min-h-screen">
+          <Nav />
+          <main className="flex-1 p-4">{children}</main>
+          <Footer />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
